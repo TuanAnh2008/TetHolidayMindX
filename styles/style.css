@@ -666,7 +666,7 @@ display: none;
 .footer {
    width: 100%;
    min-height: 600px;
-   /* background-image: url(./Tet/imgs/núi.jpg); */
+   background-image: url(../imgs/núi.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -859,7 +859,7 @@ color: rgb(0, 0, 0);
   }
 
   .lunar-present {
-    background-image: url(/Tet/imgs/vector-bao-li-xi-mung-tuoi-nam-moi-2759-removebg-preview.png);
+    background-image: url(../imgs/vector-bao-li-xi-mung-tuoi-nam-moi-2759-removebg-preview.png);
     background-size: cover;
     background-position: center;
     height: 100px;
@@ -926,7 +926,7 @@ background-size: cover;
 }
 
 .modal-new-year-body__box-wine {
-    background-image: url(/Tet/imgs/2023.gif);
+    background-image: url(../imgs/2023.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -937,7 +937,7 @@ background-size: cover;
 }
 
 .modal-new-year-body__box-wine:last-child {
-    background-image: url(/Tet/imgs/firework.gif);
+    background-image: url(../imgs/firework.gif);
 }
 
 .close-modal-icon {
