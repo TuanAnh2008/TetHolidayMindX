@@ -291,8 +291,8 @@ z-index: 0;
 }
 
 .content__place-info-picture-item-bckg-img:hover {
-    transform: scale(1.05);
-    transition: 0.2s linear;
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
 }
 
 .content__place-info-picture-list:hover > :not(:hover)  {
@@ -674,6 +674,7 @@ display: none;
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   position: relative;
 }
 
 .footer__box {
@@ -705,7 +706,7 @@ color: rgb(0, 0, 0);
 }
 
 .header__box-input {
-    width: 220px;
+    width: 240px;
     height: 35px;
     padding: 0 10px;
     font-size: 1.8rem;
@@ -864,7 +865,7 @@ color: rgb(0, 0, 0);
     height: 100px;
     width: 100px;
     position: fixed;
-    bottom: 10px;
+    bottom: 50px;
     left: 5px;
     z-index: 3;
     cursor: pointer;
@@ -943,13 +944,12 @@ background-size: cover;
   display: block;
   float: right;
   margin: 9px 5px;
-  color: red;
   border-radius: 50%;
   padding: 8px;
   cursor: pointer;
   z-index: 2;
-  font-size: 2.5rem;
-  background-color: #ccc;
+  font-size: 2.2rem;
+  opacity: 0.7;
 }
 
 
@@ -984,5 +984,51 @@ background-size: cover;
  flex: 1;
 }
 
+
+.footer__info{
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ height: 50px;
+ background-color: white;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 40px;
+ font-size: 1.8rem;
+}
+
+.footer__info-copyright:hover,
+.footer__info-phone:hover,
+.footer__info-icon:hover {
+    color: var(--text-red-color);
+    transition: 0.4s linear;
+}
+
+.footer__info-icon:hover {
+    transform: translateY(-2px);
+}
+
+.footer__info-copyright{
+    line-height: 0;
+    font-weight: 300;
+
+}
+
+.footer__info-phone{
+    font-weight: 300;
+
+}
+
+.footer__info-socials{
+ 
+}
+
+.footer__info-icon {
+ cursor: pointer;
+ padding: 0 5px;
+ font-size: 1.9rem;
+}
 
 /* Em chưa có thời gian responsive nên màn hình sẽ bị vỡ khi ở màn hình nhỏ, hoặc lớn */
