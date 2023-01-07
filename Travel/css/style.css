@@ -666,7 +666,7 @@ display: none;
 .footer {
    width: 100%;
    min-height: 600px;
-   background-image: url(./Tet/imgs/núi.jpg);
+   /* background-image: url(./Tet/imgs/núi.jpg); */
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
