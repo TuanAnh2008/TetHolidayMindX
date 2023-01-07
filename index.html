@@ -15,10 +15,10 @@
 <body>
    <div class="main">
     <!-- header -->
-    <video class="video-bckg" autoplay muted loop>
-        <source src="./imgs/4k ha long.mp4" type="video/mp4">
-    </video>
     <div class="header">
+        <video class="video-bckg" autoplay muted loop>
+            <source src="./imgs/4k ha long.mp4" type="video/mp4">
+        </video>
         <div class="grid wide">
             <!-- header navbar -->
         <div class="header-wrap">
@@ -160,12 +160,9 @@
     <a href="" class="header__menu">
         <i id="menu-icon" class=" header__menu-icon header__menu-icon fa-solid fa-bars"></i>
       </a>
-      <div class="mode">
-        <i class="mode-night fa-solid fa-sun"></i>
-      </div>
     </div>
      <div class="row">
-        <div class="col c-o-3">
+        <div class="col c-12">
     <div class="header__content">
         <div class="header__content-wrap">
         <div class="header__content-title">
@@ -200,7 +197,7 @@
         </ul>
         <div class="header__box-search">
            <div class="header__box-search-wrap">
-               <input value="" onkeyup="searchUser()" id="inputSearch" type="text" class="header__box-input" placeholder="Your Favourite Place...">
+               <input value="" onkeyup="searchUser()" id="inputSearch" type="text" class="header__box-input" placeholder="Search Your Favourite Place...">
              <div class="header__box-list-wrap">
                <ul class="header__box-list">
                    <li  class="input-item header__box-item">Hà Nội</li>
@@ -209,16 +206,17 @@
                    <li class="input-item header__box-item">Cần Thơ</li>
                    <li class="input-item header__box-item">Nghệ An</li>
                    <li class="input-item header__box-item">Tp.HCM</li>
-               </ul>
-             </div>
-           </div>
-           <div class="btn-grad">
-               <i class="fa-solid fa-magnifying-glass"></i>
+                </ul>
+            </div>
+            <div class="btn-grad">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
            </div>
      </div>
     </div>
     </div>
    </div>
+    </div>
     </div>
     </div>
 
@@ -292,7 +290,7 @@
                 <div class="content__place-info-text col l-4">
                     <h4 class="content__place-info-title-h4">Hạ Long</h4>
                     <h3 class="content__place-info-title-h3">The Best <span class="underline underline-blue">Beaches</span> </h3>
-                    <p class="content__place-info-p">Hạ Long Bay is a UNESCO World Heritage Site and popular travel destination in Quảng Ninh Province, Vietnam. Halong Bay is a beautiful natural wonder in northern Vietnam near the Chinese border. The Bay is dotted with 1,600 limestone islands and islets and covers an area of over 1,500 sqkm.</p>
+                    <p class="content__place-info-p">Ha Long Bay is a UNESCO World Heritage Site and popular travel destination in Quảng Ninh Province, Vietnam. Halong Bay is a beautiful natural wonder in northern Vietnam near the Chinese border. The Bay is dotted with 1,600 limestone islands and islets and covers an area of over 1,500 sqkm.</p>
                     <div class="content__place-info-price">
                         <span class="content__place-info-price-old-price">800</span>
                         <span class="content__place-info-price-new-price">500 $</span>
@@ -351,7 +349,7 @@
                             <h5 class="content__culture-city-nature-bckg-text-h5">01. Last Minute</h5>
                             <h4 class="content__culture-city-nature-bckg-text-h4"> Discover Cities</h4>
                             <div class="content__culture-city-nature-bckg-btn">
-                                <a href="#" class="btn btn--white btn--color-red">Details</a>
+                                <a href="./destination.html" class="btn btn--white btn--color-red">Details</a>
                             </div>
                           </div>
                         </div>
@@ -708,6 +706,12 @@
     <div onclick="scrollToTop()" id="toTop">
         <i class="toTop-icon fa-solid fa-chevron-up"></i> 
     </div>
+
+
+    <!-- Dark mode -->
+    <div class="mode">
+        <i class="mode-night fa-solid fa-sun"></i>
+      </div>
 
     <div class="modal-new-year">
         <div class="modal-new-year-body">

@@ -14,17 +14,18 @@
 .header{
  position: relative;
  /* không bị co nhỏ khi ở tablet, mobile */
- background-size: 100% 100%;
+ /* background-size: 100% 100%; */
+ /* height: 710px; */
+ height: 100vh;
+ overflow: hidden;
 }
 
 .video-bckg{
 position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-z-index: 0;
- min-width: 100%;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ object-fit: cover;
 } 
 
 .header-wrap{
@@ -82,7 +83,7 @@ z-index: 0;
     color: var(--text-white-color);
     padding: 0px 15px;
     letter-spacing: 2px;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
     font-weight: 400;
     cursor: pointer;
@@ -150,6 +151,7 @@ z-index: 0;
     text-decoration: none;
     color: #898988;
     letter-spacing: 1px;
+    font-size: 1.3rem;
 }
 
 
@@ -163,14 +165,16 @@ z-index: 0;
 }
 
 /* header content */
-.header__content{
- /* height: calc(100% - var(--header-height-wrap));
- display: flex;
- align-items: center;
- justify-content: center; */
-
- margin-top: 100px;
+.header__cotent-center {
+    text-align: center;
+    width: 100%;
 }
+
+.header__content{
+ margin-top: 50px;
+ position: relative;
+}
+
 
 .header__content-wrap {
     text-align: center;
@@ -207,8 +211,8 @@ z-index: 0;
 
 .header__content-culture-item{
  margin: 15px;
- width: 113px;
- height: 113px;
+ width: 96px;
+ height: 96px;
  background-color: var( --header--bckg-color);
  display: flex;
  justify-content: center;
@@ -227,12 +231,12 @@ z-index: 0;
 
 .header__content-culture-item-icon {
  color: var(--text-white-color);
- font-size: 3rem;
+ font-size: 2.5rem;
  margin-bottom: 10px;
 }
 
 .heade__content-culture-item-h5{
- font-size: 1.6rem;
+ font-size: 1.4rem;
  text-transform: uppercase;
  letter-spacing: 1px;
  font-weight: 300;
@@ -244,9 +248,6 @@ z-index: 0;
  
 }
 
-.content__place-info:first-of-type {
-    margin-top: 300px;
-}
 
 .content__place-info{
     padding: 56px 0;
@@ -263,7 +264,7 @@ z-index: 0;
  color: #a3a3a3;
  font-weight: 500;
  letter-spacing: 1px;
- margin-bottom: 20px;
+ margin-bottom: 16px;
 }
 
 .content__place-info-title-h3{
@@ -384,7 +385,7 @@ align-items: center;
 
 .content__place-info-p{
  color: #9a9a9a;
- font-size: 1.4rem;
+ font-size: 1.7rem;
  letter-spacing: 1px;
  line-height: 27px;
  margin-bottom: 24px;
@@ -474,7 +475,7 @@ align-items: center;
 }
 
 .content__place-info-item-text-p{
- font-size: 1.6rem;
+ font-size: 1.8rem;
  font-weight: 300;
  color: #9f9f9f;
  margin-bottom: 12px;
@@ -484,7 +485,7 @@ align-items: center;
  color: var(--text-blue-color);
  text-decoration: none;
  display: block;
- font-size: 1.5rem;
+ font-size: 1.7rem;
 }
 
 /* Content culture */
@@ -566,12 +567,12 @@ object-fit: cover;
 }
 .content__place-info-wrap-item-title-h4{
  color: #555;
- font-size: 2rem;
+ font-size: 2.2rem;
 
 }
 .content__place-info-wrap-item-title-h5{
  color: #9a9a9a;
- font-size: 1.5rem;
+ font-size: 1.7rem;
  letter-spacing: 2px;
 }
 
@@ -699,19 +700,26 @@ color: rgb(0, 0, 0);
 
 
 .header__box-search {
+    height: 55px;
     display: flex;
-    padding: 24px 0;
+    margin-top: 30px;
+    width: 40%;
+    /* padding: 70px 0; */
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header__box-input {
-    width: 240px;
+    width: 100%;
+    text-align: center;
     height: 35px;
-    padding: 0 10px;
-    font-size: 1.8rem;
+    padding: 25px 10px;
+    font-size: 1.6rem;
     outline: none;
-    border: 1px solid rgb(50, 49, 49);
+    border: 1px solid rgb(149, 145, 145);
     border-radius: 2px;
     /* position: relative; */
     border-radius: 10px;
@@ -728,15 +736,22 @@ color: rgb(0, 0, 0);
          
 .btn-grad {
     background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
-    padding: 10px 25px;
-    text-align: center;
+    width: 55px;
+    border-radius: 50%;
     transition: 0.5s;
-    background-size: 200% auto;
+    /* background-size: 200% auto; */
     color: white;            
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
     cursor: pointer;
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 97%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .btn-grad:hover {
@@ -763,7 +778,7 @@ color: rgb(0, 0, 0);
 
 .header__box-item {
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
    border-top: 1px solid rgb(134, 133, 133);
    border-radius: 5px;
     padding: 4px;
@@ -780,6 +795,8 @@ color: rgb(0, 0, 0);
 
   .header__box-search-wrap {
     position: relative;
+    flex: 1;
+    height: 100%;
   }
 /*  */
   
@@ -1031,4 +1048,5 @@ background-size: cover;
  font-size: 1.9rem;
 }
 
-/* Em chưa có thời gian responsive nên màn hình sẽ bị vỡ khi ở màn hình nhỏ, hoặc lớn */
+/* Tương lai sẽ có responsive*/
+/* Trang con đó chính là Details của Discover Cities, tương lai sẽ có tất cả trang con */

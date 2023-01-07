@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 :root {
     --text-purple-color: #ba71da;
     --text-green-color: #1bbc9b;
@@ -20,8 +20,8 @@
 
 
 html {
-    font-family: 'Poppins', sans-serif;
-    font-size: 62.5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 11px;
 }
 
 @keyframes fadeIn {
@@ -59,7 +59,7 @@ html {
 
 .modal__content-span{
  color: #a3a3a3;
- font-size: 1.4rem;
+ font-size: 1.6rem;
  text-transform: uppercase;
  letter-spacing: 2px;
  text-align: center;
@@ -67,7 +67,7 @@ html {
 
 .modal__content-heading{
 text-align: center;
-font-size: 2.2rem;
+font-size: 2.4rem;
 text-transform: uppercase;
 font-weight: 600;
 margin-bottom: 42px;
@@ -106,14 +106,14 @@ margin-bottom: 42px;
 
 .modal__place-name{
     color: #000;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
 .modal__place-city{
     letter-spacing: 1px;
     font-weight: 300;
- font-size: 1.6rem;
+ font-size: 1.8rem;
  color: rgb(131, 128, 128);
 }
 
@@ -126,7 +126,7 @@ margin-bottom: 42px;
     padding: 2px 20px;
     text-transform: uppercase;
     border-radius: 999px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .modal__place-btn--color-yellow {
@@ -279,8 +279,8 @@ margin-bottom: 42px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: var(--text-purple-color);
     z-index: 2;
@@ -368,23 +368,23 @@ margin-bottom: 42px;
 }
 
 .slick-dots button {
- padding: 10px;
+ padding: 7px;
  font-size: 0;
  border-radius: 50%;
  border: none;
- margin: 0 3px;
+ margin: 0 4px;
  cursor: pointer;
 }
 
 .slick-dots .slick-active button {
-    background-color: black;
+    background-color: var(--text-red-color);
     transition: 0.2s linear;
 }
 
 .slick-dots {
     list-style: none;
     position: absolute;
-    top: 5px;
+    bottom: 7%;
     left: 50%;
     display: flex !important;
     transform: translateX(-50%);
@@ -393,6 +393,7 @@ margin-bottom: 42px;
 
 /* dark mode */
 .mode{
+ position: fixed;
  background-color: white;
  width: 50px;
  height: 50px;
@@ -401,17 +402,12 @@ margin-bottom: 42px;
  justify-content: center;
  align-items: center;
  cursor: pointer;
- position: absolute;
- right: 3%;
- top: 13px;
- box-shadow: 1px 3px 5px rgba(0,0,0, 0.4);
+ right: 40px;
+ bottom: 140px;
+ border: 1px solid rgba(0,0,0, 0.7);
 }
 .mode__switch{
  font-size: 2rem;
-}
-
-.mode__switch::before {
-    /* content: ; */
 }
 
 .mode-night {

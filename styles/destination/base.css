@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+:root {
+    --text-purple-color: #ba71da;
+    --text-green-color: #1bbc9b;
+    --text-blue-color: #14b9d5;
+    --text-yellow-color: #ffd205;
+    --text-red-color: #f76570;
+    --text-white-color: #fff;
+    --header--bckg-color: rgba(0,0,0, 0.5);
+   --header-height-wrap: 74px;
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 62.5%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+    

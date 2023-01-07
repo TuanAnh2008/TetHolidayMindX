@@ -91,7 +91,7 @@ function searchUser() {
     console.log(text);
     //   Lấy giá trị từng cái element và so sánh giá trị search
     if (text.indexOf(inputSearch.value) > -1) {
-      course.style.display = "";
+      course.style.display = "block";
     } else {
       course.style.display = "none";
     }
@@ -140,10 +140,10 @@ $(".content__place-info-img-wrap").slick({
 // dark mode
 var btnSwitchMode = document.querySelector(".mode");
 // var darkMode = document.querySelector('.black-mode');
-var main = document.querySelector(".main");
+var content = document.querySelector(".content");
 btnSwitchMode.onclick = function (e) {
-  main.classList.toggle("black-mode");
-  var checkMode = main.classList.contains("black-mode");
+  content.classList.toggle("black-mode");
+  var checkMode = content.classList.contains("black-mode");
   console.log(checkMode);
   if (checkMode === true) {
     btnSwitchMode.innerHTML = '<i class="mode-dark fa-solid fa-moon"></i>';
