@@ -1,0 +1,988 @@
+.main{
+ overflow: hidden;
+}
+
+.black-mode {
+     background-color: var(--black-mode);
+}
+
+::selection {
+    background-color: rgb(241, 185, 82);
+}
+
+/* Header */
+.header{
+ position: relative;
+ /* không bị co nhỏ khi ở tablet, mobile */
+ background-size: 100% 100%;
+}
+
+.video-bckg{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 0;
+ min-width: 100%;
+} 
+
+.header-wrap{
+ height: inherit;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: var(--header-height-wrap);
+ /* background-color: black; */
+}
+
+.header__logo{
+ width: 160px;
+ display: inline-block;
+ 
+}
+
+.header__logo-img{
+ width: 100%;
+}
+
+.header__navbar{
+    
+}
+
+.header__navbar-item-h3:hover .navbar__icon {
+    color: var(--text-white-color);
+}
+
+.header__navbar-item:hover .navbar__icon {
+    transform: rotate(360deg);
+    transition: 0.2s linear;
+
+}
+
+.header__navbar-item:hover .header__navbar-link-list {
+    display: block;
+    animation:  fadeIn 0.2s linear;
+}
+
+
+.header__navbar-list{
+    list-style: none;
+}
+
+
+.header__navbar-item{
+    position: relative;
+    display: inline-block;
+ 
+}
+
+.header__navbar-item-h3{
+    text-decoration: none;
+    color: var(--text-white-color);
+    padding: 0px 15px;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.header__navbar-item-h3:hover {
+  transition: 0.3s linear;
+ background: linear-gradient(to right, rgb(255, 98, 0), rgb(193, 44, 10), rgb(255, 255, 102));
+ /* cắt nền theo hình của chữ  */
+  -webkit-background-clip: text; 
+  color: transparent;  
+}
+
+.header__navbar-link-list{
+ display: none;
+ position: absolute;
+ top: 180%;
+ left: 0;
+ right: -64%;
+ /* min-width: 170px; */
+ list-style: none;
+ box-shadow: 0px 2px 3px #ccc;
+ background-color: var(--text-white-color);
+ z-index: 1;
+}
+
+.header__navbar-link-list::after {
+    position: absolute;
+    top: -24px;
+    left: 49%;
+    transform: translateX(-50%);
+    content: "";
+    border-style: solid;
+    border-color: transparent transparent var(--text-white-color) transparent;
+    /* transform: rotate(50deg); */
+    border-width: 12px 14px;
+    box-sizing: border-box;
+}
+
+.header__navbar-link-list::before {
+    position: absolute;
+    content: "";
+    top: -28px;
+    width: 100%;
+    height: 28px;
+    background-color: transparent;
+}
+
+.header__navbar-link-item{
+ 
+}
+
+.header__navbar-link-item:hover {
+    background-color: #ede8e8;
+
+}
+
+.header__navbar-link-item:hover a {
+    color: var(--text-purple-color);
+}
+
+.header__navbar-link-item-a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #898988;
+    letter-spacing: 1px;
+}
+
+
+.header__menu{
+    display: inline-block;
+}
+
+.header__menu-icon{
+ font-size: 3rem;
+ color: var(--text-white-color);
+}
+
+/* header content */
+.header__content{
+ /* height: calc(100% - var(--header-height-wrap));
+ display: flex;
+ align-items: center;
+ justify-content: center; */
+
+ margin-top: 100px;
+}
+
+.header__content-wrap {
+    text-align: center;
+}
+
+.header__content-title{
+ color: var(--text-white-color);
+ margin-bottom: 50px;
+ transition: 0.5s linear;
+}
+
+.header__content-title-h2{
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.header__content-title-span {
+    animation: fadeIn 1s alternate infinite ease-in-out;
+}
+
+.header__content-title-h4{
+ font-size: 1.8rem;
+ letter-spacing: 3px;
+ font-weight: 400;
+ text-transform: uppercase;
+}
+
+.header__content-culture-list{
+ display: flex;
+ list-style: none;
+ justify-content: center;
+ 
+}
+
+.header__content-culture-item{
+ margin: 15px;
+ width: 113px;
+ height: 113px;
+ background-color: var( --header--bckg-color);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.header__content-culture-item:hover {
+    transform: scale(1.2);
+    transition: 0.2s linear;
+}
+
+.header__content-culture-item-link {
+ text-decoration: none;
+ color: transparent;
+}
+
+.header__content-culture-item-icon {
+ color: var(--text-white-color);
+ font-size: 3rem;
+ margin-bottom: 10px;
+}
+
+.heade__content-culture-item-h5{
+ font-size: 1.6rem;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ font-weight: 300;
+ color: var(--text-white-color);
+}
+
+/* Content */
+.content{
+ 
+}
+
+.content__place-info:first-of-type {
+    margin-top: 300px;
+}
+
+.content__place-info{
+    padding: 56px 0;
+}
+
+.content__place-info-title{
+ text-align: center;
+ margin-bottom: 28px;
+ text-transform: uppercase;
+}
+
+.content__place-info-title-h4{
+ font-size: 2rem;
+ color: #a3a3a3;
+ font-weight: 500;
+ letter-spacing: 1px;
+ margin-bottom: 20px;
+}
+
+.content__place-info-title-h3{
+ font-size: 3.6rem;
+ color: #555;
+}
+
+
+.content__place-info-picture-list{
+ 
+}
+
+.content__place-info-picture-item{
+  padding-top: 24px;
+
+}
+
+.content__place-info-picture-item-bckg-img {
+    background-position: center;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 2px;
+    background-size: cover;
+}
+
+.content__place-info-picture-item-bckg-img:hover {
+    transform: scale(1.05);
+    transition: 0.2s linear;
+}
+
+.content__place-info-picture-list:hover > :not(:hover)  {
+    transition: 200ms ease-in-out;
+   opacity: 0.4;
+}
+
+.content__place-info-picture-item-title{
+ position: absolute;
+ left: 5%;
+ bottom: 5%;
+ color: var(--text-white-color);
+ background:rgba(0, 0, 0, 0.6);
+ border-radius: 2px;
+ padding: 4px;
+}
+
+.content__place-info-picture-item-title-heading{
+    font-size: 2.5rem;
+    margin-bottom: 1px;
+}
+
+/* .content__place-info-picture-item-title-sub-heading{
+ margin: 0;
+ font-size: 1.6rem;
+ letter-spacing: 2px;
+ font-weight: 400;
+} */
+
+/* bacground content */
+.content__bckg{
+ background-image: url(https://hoangviettravel.vn/wp-content/uploads/2020/06/cac-cay-cau-da-nang-3.jpg);
+ /* background-position: ; */
+ background-size: cover;
+ height: 185px;
+}
+
+.content__bckg-wrap{
+display: flex;
+height: inherit;
+justify-content: center;
+align-items: center;
+
+}
+
+.content__bckg-wrap-heading{
+ font-size: 4.2rem;
+ color: var(--text-white-color);
+ margin-right: 450px;
+ 
+}
+
+.content__bckg-wrap-btn {
+ background-color: var(--text-white-color);
+ display: block;
+ padding: 10px 16px;
+ border-radius: 30px;
+ text-decoration: none;
+ color: var(--text-red-color);
+ text-transform: uppercase;
+ font-size: 1.5rem;
+ letter-spacing: 2px;
+}
+
+.content__bckg-wrap-btn:hover {
+    transition: 0.25s ease-out;
+    background-color: var(--text-red-color);
+    color: var(--text-white-color);
+}
+
+/* Content places beaches */
+.content__place-info{
+ 
+}
+
+
+.content__place-info-text{
+ margin-bottom: 24px;
+}
+
+
+.content__place-info-title-h4{
+
+}
+
+.content__place-info-title-h3{
+
+}
+
+.content__place-info-p{
+ color: #9a9a9a;
+ font-size: 1.4rem;
+ letter-spacing: 1px;
+ line-height: 27px;
+ margin-bottom: 24px;
+}
+
+.content__place-info-p:first-of-type {
+    margin-top: 24px;
+}
+
+.content__place-info-price{
+ font-size: 3rem;
+ margin-bottom: 24px;
+}
+
+.content__place-info-price-old-price{
+ color: #ccc;
+ text-decoration:line-through;
+}
+
+.content__place-info-price-new-price{
+ color: rgb(123, 122, 122);
+}
+
+.content__place-info-price-title{
+ color: rgb(123, 122, 122);
+ font-size: 1.4rem;
+ text-transform: uppercase;
+ opacity: 0.8;
+}
+
+.content__place-info-btn{
+ width: 163px;
+ height: 44px;
+ font-size: 1.5rem;
+ color: var(--text-white-color);
+ background-color: var(--text-green-color);
+ border-radius: 30px;
+ text-decoration: none;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 24px;
+
+}
+
+.content__place-info-img{
+ background-position: center;
+ background-size: cover;
+ width: 100%;
+ height: 460px;
+ border-radius: 4px;
+}
+
+  
+.content__place-info-img-wrap {
+ margin-bottom: 24px;
+}
+
+.content__place-info-list{
+
+}
+
+.content__place-info-item{
+ display: flex;
+}
+
+.content__place-info-item-wrap{
+ display: flex;
+}
+
+.content__place-info-item-img{
+ width: 50px;
+ height: 50px;
+}
+
+.content__place-info-item-text{
+ margin-left: 24px;
+}
+
+.content__place-info-item-text-heading{
+ font-size: 2.1rem;
+ letter-spacing: 1px;
+ color: #555;
+ margin-bottom: 12px;
+}
+
+.content__place-info-item-text-p{
+ font-size: 1.6rem;
+ font-weight: 300;
+ color: #9f9f9f;
+ margin-bottom: 12px;
+}
+
+.content__place-info-item-text-a{
+ color: var(--text-blue-color);
+ text-decoration: none;
+ display: block;
+ font-size: 1.5rem;
+}
+
+/* Content culture */
+
+
+.content__culture{
+
+}
+
+.content__culture-city{
+}
+
+.content__culture-city-nature-bckg{
+ background-size: cover;
+ padding-top: 30%;
+ /* padding: ; */
+ background-position: center;
+ position: relative;
+}
+
+
+ .content__culture-city-nature-bckg-text{  
+/* display: flex; */
+ position: absolute;
+ top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: var(--text-white-color);
+text-align: center;
+}
+
+.content__culture-city-nature-bckg-text-h5{
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+ }
+
+ .content__culture-city-nature-bckg-text-h4{
+   font-size: 3.3rem;
+   margin-bottom: 12px;
+ }
+
+.btn--white {
+    background-color: var(--text-white-color);
+    width: 150px;
+}
+
+/* COntent Promotions */
+.content__place-info-wrap{
+ 
+}
+
+.content__place-info-wrap-list{
+}
+
+.content__place-info-wrap-item-border {
+    /* border: 1px solid rgb(237, 234, 234); */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    background-color: #f6f1f1;
+}
+
+.content__place-info-wrap-item{
+
+}
+
+.conent__place-info-wrap-item-img{
+width: 100%;
+height: 234px;
+object-fit: cover;
+}
+.content__place-info-wrap-item-content{
+    padding: 30px;
+}
+.content__place-info-wrap-item-title{
+ margin-bottom: 12px;
+}
+.content__place-info-wrap-item-title-h4{
+ color: #555;
+ font-size: 2rem;
+
+}
+.content__place-info-wrap-item-title-h5{
+ color: #9a9a9a;
+ font-size: 1.5rem;
+ letter-spacing: 2px;
+}
+
+.content__place-info-wrap-item-title-icon {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    /* margin-right: 5px; */
+}
+
+.content__place-info-wrap-item-content-sub-title{
+ --horizontal-line: #cfcfcf;
+ display: flex;
+ align-items: center;
+ padding: 12px 0;
+ border-top: 1px solid var(--horizontal-line);
+ border-bottom: 1px solid var(--horizontal-line);
+}
+
+.content__place-info-wrap-item-content-sub-title-type{
+    font-size: 2rem;
+    display: block;
+    padding: 3px 8px;
+    /* background-color: var(--text-yellow-color); */
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--text-white-color);
+    position: relative;
+}
+
+.content__place-info-wrap-item-content-sub-title-type:hover .content__place-info-wrap-item-content-sub-title-type-hov-category  {
+ display: block;
+}
+
+.content__place-info-wrap-item-content-sub-title-type-hov-category {
+display: none;
+ position: absolute;
+ top: 125%;
+ color: var(--text-white-color);
+ padding: 3px 5px;
+ background-color: #555;
+ left: 0;
+ font-size: 1.4rem;
+}
+
+.content__place-info-wrap-item-content-sub-title-type-hov-category::before {
+    content: "";
+    display: block;
+    border-color:  #555  transparent transparent  #555;
+    width: 10%;
+    border-width: 7px 9px;
+    height: 5px;
+    border-style: solid;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 14%;
+    top: -6%;
+    /* Border không đổ màu nên dùng thuộc tính box-sizing: border box để khắc phục */
+    box-sizing: border-box;
+}
+
+.content__place-info-wrap-item-content-sub-title-price{
+ font-size: 2.7rem;
+ color: #555;
+ letter-spacing: 1px;
+ margin-left: auto;
+}
+
+.content__place-info-wrap-item-content-text{
+ margin: 12px 0;
+}
+
+.content__place-info-wrap-item-content-text-p{
+ color: #9a9a9a;
+ font-size: 1.6rem;
+ letter-spacing: 1px;
+}
+
+.content__place-info-wrap-item-content-btn {
+    color: var(--text-white-color);
+    text-align: center;
+    width: 100px;
+    padding: 6px 10px;
+}
+
+.content__place-info-wrap-item-content-btn:hover {
+    transform: scale(1.1);
+    transition: 0.2s linear;
+}
+
+
+/* footer */
+.footer {
+   width: 100%;
+   min-height: 600px;
+   background-image: url(/Tet/imgs/núi.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.footer__box {
+  width: 50%;
+  /* height: 200px; */
+  background-color: var(--text-white-color);
+  padding: 24px 0; 
+  
+}
+
+
+.footer__heading{
+ text-align: center;
+ font-size: 3rem;
+background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+color: rgb(0, 0, 0);
+}
+
+.footer__box-wrap{
+
+}
+
+
+.header__box-search {
+    display: flex;
+    padding: 24px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__box-input {
+    width: 220px;
+    height: 35px;
+    padding: 0 10px;
+    font-size: 1.8rem;
+    outline: none;
+    border: 1px solid rgb(50, 49, 49);
+    border-radius: 2px;
+    /* position: relative; */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+.header__box-input:focus {
+    border: 3px solid rgb(219, 93, 93);
+}
+
+
+
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
+    padding: 10px 25px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+
+
+  .header__box-list{
+  list-style: none;
+  position:absolute;
+  top: 100%;
+  /* padding: 2px 0px; */
+  left: 0;
+  right: 0;
+  border: 1px solid rgb(35, 35, 35);  
+  border-radius: 5px;
+  margin-top: 5px;
+  z-index: 1;
+  background-color: white;
+}
+
+.header__box-item {
+    cursor: pointer;
+    font-size: 1.4rem;
+   border-top: 1px solid rgb(134, 133, 133);
+   border-radius: 5px;
+    padding: 4px;
+  }
+
+  .header__box-item:nth-child(1) {
+    border: none;
+ 
+  }
+
+  .header__box-item:hover {
+    background-color: rgb(173, 170, 170);
+  }
+
+  .header__box-search-wrap {
+    position: relative;
+  }
+/*  */
+  
+  .header__box-2 {
+    width: 50%;
+    height: auto;
+    background-color: var(--text-white-color);
+    padding: 24px 0;
+    border: 1px solid black;
+  }
+
+  .header__box-list-wrap {
+    display: none;
+}
+
+.header__box-input:focus ~ .header__box-list-wrap {
+    display: block;
+    border-radius: 3px;
+    animation: input 0.3s linear;
+  }
+
+
+
+  .countdown-timer-list{
+   display: flex;
+   list-style: none;
+   justify-content: space-between;
+   text-align: center;
+}
+
+.counter-timer-list__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 3px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(204, 202, 202);
+  }
+
+  .counter-timer-list__item span {
+    font-size: 2rem;
+    line-height: 1rem;
+    color: var(--text-red-color);
+  }
+
+  .counter-timer-list__item h3 {
+    font-size: 5rem;
+    background: linear-gradient(to right, rgba(18, 68, 3, 0.601), rgb(231, 113, 2), rgb(240, 20, 8));
+    /* cắt nền theo hình của chữ  */
+     -webkit-background-clip: text; 
+     
+     /* Màu trong suốt để không bị đè màu */
+     color: transparent;  
+  }
+
+
+
+  .footer__box-slider-list{
+    height: 170px;
+   list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .footer__box-slider-item{
+   height: 140px;
+   width: 140px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   margin: 0 5px;
+   border-radius: 5px;
+  }
+
+  .lunar-present {
+    background-image: url(/Tet/imgs/vector-bao-li-xi-mung-tuoi-nam-moi-2759-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    bottom: 10px;
+    left: 5px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+
+/*  modal present box */
+.modal-new-year{
+display: none;
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-new-year-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.modal-new-year-body__box{
+ overflow: hidden;
+ background-color: var(--text-white-color);
+ width: 500px;
+ min-height: 530px;
+ z-index: 1;
+ position: relative;
+}
+
+.modal-new-year-body__box-heading{
+ font-size: 5rem;
+ text-align: center;
+animation: runText 10s infinite;
+background: linear-gradient(to right, #FF512F, #DD2476);
+-webkit-background-clip: text;
+color: transparent;
+margin-top: 35px;
+}
+
+.modal-new-year-body__box-img{
+width: 100%;
+padding-top: 60%;
+background-image: url(https://media.tenor.com/Hf_B5ThUWqUAAAAM/tiger-year-of-the-tiger.gif);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.modal-new-year-body__box-wine-wrap {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-new-year-body__box-wine {
+    background-image: url(/Tet/imgs/2023.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 100px;
+    margin: 0 7px;
+    border-radius: 5px;
+}
+
+.modal-new-year-body__box-wine:last-child {
+    background-image: url(/Tet/imgs/firework.gif);
+}
+
+.close-modal-icon {
+  display: block;
+  float: right;
+  margin: 9px 5px;
+  color: red;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 2.5rem;
+  background-color: #ccc;
+}
+
+
+
+/* Footer music song */
+.footer__box-music{
+    padding: 5px;
+    text-align: center;
+}
+
+.footer__box-music-heading{
+  margin-top: 10px;
+    font-size: 3rem;
+}
+
+.footer__box-music-wrap{
+    margin-top: 20px;
+    display: flex;
+    background-color: #f1f3f4;
+    align-items: center;
+    border-radius: 9px;
+}
+
+.footer__box-music-image{
+ width: 200px;
+ height: 100%;
+ border-radius: 9px;
+}
+
+.footer__box-music-audio {
+ outline: none;
+ flex: 1;
+}
+
+
+/* Em chưa có thời gian responsive nên màn hình sẽ bị vỡ khi ở màn hình nhỏ, hoặc lớn */
