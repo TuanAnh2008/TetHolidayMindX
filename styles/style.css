@@ -142,7 +142,10 @@ position: absolute;
 }
 
 .header__navbar-link-item:hover a {
-    color: var(--text-purple-color);
+    transition: 0.3s linear;
+    background: linear-gradient(to right, rgb(255, 98, 0), rgb(193, 44, 10), rgb(255, 255, 102));
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .header__navbar-link-item-a{
@@ -554,6 +557,7 @@ text-align: center;
 
 }
 
+
 .conent__place-info-wrap-item-img{
 width: 100%;
 height: 234px;
@@ -653,8 +657,7 @@ display: none;
 .content__place-info-wrap-item-content-btn {
     color: var(--text-white-color);
     text-align: center;
-    width: 100px;
-    padding: 6px 10px;
+    padding: 8px 10px;
 }
 
 .content__place-info-wrap-item-content-btn:hover {
@@ -847,12 +850,7 @@ color: rgb(0, 0, 0);
 
   .counter-timer-list__item h3 {
     font-size: 5rem;
-    background: linear-gradient(to right, rgba(18, 68, 3, 0.601), rgb(231, 113, 2), rgb(240, 20, 8));
-    /* cắt nền theo hình của chữ  */
-     -webkit-background-clip: text; 
-     
-     /* Màu trong suốt để không bị đè màu */
-     color: transparent;  
+    color: var(--text-red-color);
   }
 
 
@@ -1023,6 +1021,16 @@ background-size: cover;
     transition: 0.4s linear;
 }
 
+.footer__info-phone a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer__info-phone a:hover {
+    color: var(--text-red-color);
+    transition: 0.4s linear;
+}
+
 .footer__info-icon:hover {
     transform: translateY(-2px);
 }
@@ -1048,5 +1056,142 @@ background-size: cover;
  font-size: 1.9rem;
 }
 
+
+.modal-search-place {
+display: none;
+animation: fadeIn 0.4s ease-in-out;
+/* z-index: 2; */
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-search-place-body{
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.modal-search-place-body__box{
+position: relative;
+ max-width: 800px;
+ height: 650px;
+ background-color: white;
+ border-radius: 3px;
+ padding-top: 30px;
+}
+
 /* Tương lai sẽ có responsive*/
-/* Trang con đó chính là Details của Discover Cities, tương lai sẽ có tất cả trang con */
+
+/* modal search */
+.modal-search-place-body__box-list {
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-items: center;
+} 
+
+.content__place-info-wrap-item {
+    max-width: 800px;
+}
+
+.modal-search-place-body__box-close {
+    position: absolute;
+    top: 0px;
+    cursor: pointer;
+    right: 0;
+    z-index: 2;
+    padding: 2px 12px;
+    font-size: 2rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--text-red-color);
+    color: var(--text-white-color);
+}
+
+
+.modal-register{
+    display: none;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-register-body{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100%;
+}
+
+
+.modal-register__box {
+    min-width: 500px;
+    min-height: 500px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+
+.modal-register__box-input-item{
+    margin-bottom: 40px;
+}
+
+.modal-register__box-input-item-title{
+ font-size: 2rem;
+ color: var(--text-green-color);
+}
+
+.modal-register__box-input-item-input{
+ outline: none;
+ width: 100%;
+ padding: 15px 3px;
+ border-top: none;
+ border-left: none;
+ border-right: none;
+border-bottom-left-radius: 2px;
+border-bottom-right-radius: 2px;
+font-size: 1.5rem;
+}
+
+.modal-register__box-input-item-input:focus {
+    border-color: var(--text-green-color);
+   transition: 0.5s;
+}
+
+.modal-register-box-confirm{
+ cursor: pointer;
+ padding: 8px 15px;
+ font-size: 1.5rem;
+ background-color:  var(--text-green-color);
+ border: none;
+ border-radius: 4px;
+ color: var(--text-white-color);
+}
+
+
+.modal-register__box-input-item-notify {
+    margin-top: 5px;
+    font-size: 1.4rem;
+}
+
+.modal-register-box-close {
+    color: red;
+    font-size: 1.9rem;
+    float: right;
+    cursor: pointer;
+    display: block;
+}

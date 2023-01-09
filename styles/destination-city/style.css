@@ -8,10 +8,7 @@
    
    /* Header */
    .header{
-       position: fixed;
-       top: 0;
-       left: 0;
-       right: 0;
+       height: auto;
    }
    
    .header-wrap{
@@ -126,7 +123,10 @@
    }
    
    .header__navbar-link-item:hover a {
-       color: var(--text-purple-color);
+    transition: 0.2s linear;
+    background: linear-gradient(to right, rgb(255, 98, 0), rgb(193, 44, 10), rgb(255, 255, 102));
+    -webkit-background-clip: text;
+    color: transparent;
    }
    
    .header__navbar-link-item-a{
@@ -139,6 +139,7 @@
    }
    
    
+   
    .header__menu{
        display: inline-block;
    }
@@ -149,10 +150,64 @@
    }
    
    
+   /* Header content */
+   .header-slide {
+    background-image: url(../../imgs/ho\ chi\ minh\ subpage\ background.webp);
+    padding-top: 50%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+   }
 
-   /* Content */
+   .header-slide__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    border-radius: 9px;
+    text-align: center;
+   }
 
-.content {
+   .header-slide-wrap {
+    background: url(https://www.shutterstock.com/image-vector/chinese-new-year-red-background-260nw-1344985082.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+   }
+   .header-slide__content-heading{
+   font-size: 5rem;
+   margin-bottom: 20px;
+   }
+
+   .header-slide__content-title{
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-bottom: 20px;
+   }
+
+   .header-slde__content-current-page{
+    font-size: 4rem;
+   }
+
+   .header-slde__content-current-page a {
+    margin-right: 3px;
+    /* color: rgb(248, 147, 80); */
+    color: #ccc;
+   }
+
+   .header-slde__content-current-page a:hover {
+    transition: 0.1s linear;
+   opacity: 0.8;
+   }
+
+
+
+   .content {
     margin-top: var(--header-height-wrap);
     padding: 24px;
 }
@@ -188,6 +243,60 @@
 
 }
 
+.content__main-sub-content-image{
+ position: relative;
+}
+
+.content__main-sub-content-image-overlay{
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+opacity: 0;
+transition: opacity 0.4s ease-in-out;
+background: var(--text-red-color);
+}
+
+.content__main-sub-content-image-content{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+color: var(--text-white-color);
+text-align: center;
+}
+
+.content__main-sub-content-image-content btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 2.3rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.content__main-sub-content-image-content btn a {
+    text-decoration: none;
+    color: var(--text-red-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.content__main-sub-content-image-content span {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 3rem;
+}
+
+.content__main-sub-content-image-content h3 {
+    font-size: 4.4rem;
+    margin-bottom: 5px;
+}
+
+.content__main-sub-content-image:hover .content__main-sub-content-image-overlay {
+    opacity: 1;
+}
 
 .content__main-sub-content-wrap {
  height: 100%;
@@ -223,4 +332,3 @@ border-radius: 10px;
 .content__main-detials-text-p:first-of-type {
  color: rgb(0, 0, 0);
 }
-
