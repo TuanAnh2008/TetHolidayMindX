@@ -157,9 +157,7 @@ var alertBook = document.querySelector(".content__place-info-btn");
 
 alertBook.onclick = function (e) {
   e.preventDefault();
-  alert(
-    "Trang web chưa hoàn thiện 100%, Tôi đang cố gắng hoàn thiện sớm nhất có thể. Mong bạn thông cảm"
-  );
+  modalRegister.style.display = 'block';
 };
 
 // Lunar Present
