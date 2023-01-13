@@ -263,8 +263,13 @@ var confirmMail = document.getElementById('input-email');
 
 var registerModal = btnConfirm.onclick = e => {
  if(registerCheck()) {
-  alert('Chúng tôi sẽ liên hệ bạn sau ít phút nữa');
+ alert('Chúng tôi sẽ liên hệ bạn sau ít phút nữa');
+ const allInputItem = document.querySelectorAll('.modal-register__box-input-item-input');
+ for(i in allInputItem) {
+  allInputItem[i].value = '';
  }
+}
+ 
 }
 
 function registerCheck()  {

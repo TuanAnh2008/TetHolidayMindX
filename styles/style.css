@@ -3,7 +3,7 @@
 }
 
 .black-mode {
-     background-color: var(--black-mode);
+     background-color: #18191a;
 }
 
 ::selection {
