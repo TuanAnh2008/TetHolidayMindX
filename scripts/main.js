@@ -157,7 +157,7 @@ var alertBook = document.querySelector(".content__place-info-btn");
 
 alertBook.onclick = function (e) {
   e.preventDefault();
-  modalRegister.style.display = 'block';
+  modalRegister.style.display = "block";
 };
 
 // Lunar Present
@@ -217,7 +217,9 @@ var searchModal = document.querySelector(".modal-search-place");
 var searchBtn = document.querySelector(".btn-grad");
 // Lấy li - success (array)
 var searchItem = Array.from(
-  document.querySelectorAll(".modal-search-place .content__place-info-wrap-item")
+  document.querySelectorAll(
+    ".modal-search-place .content__place-info-wrap-item"
+  )
 );
 
 // // Lấy h4 của li - success (array)
@@ -227,110 +229,104 @@ var searchItem = Array.from(
 
 searchBtn.onclick = (e) => {
   e.stopPropagation();
-  var inputValue  = inputSearch.value.toLowerCase().trim();
-  if(inputValue == '') {
-    alert('Input Trống!');
-    return searchModal.style.display == 'none';
+  var inputValue = inputSearch.value.toLowerCase().trim();
+  if (inputValue == "") {
+    alert("Input Trống!");
+    return searchModal.style.display == "none";
   }
   searchModal.style.display = "block";
   searchItem.forEach((course) => {
-    var h4content = course.querySelector('.content__place-info-wrap-item-title-h4').innerHTML.trim().toLowerCase();
+    var h4content = course
+      .querySelector(".content__place-info-wrap-item-title-h4")
+      .innerHTML.trim()
+      .toLowerCase();
     console.log(h4content);
     // !== -1 là tìm thấy, -1 là không tìm tháy index
-   if(h4content.indexOf(inputValue) !== -1) {
-    course.style.display = 'block'
-   }
-   else {
-    course.style.display = 'none';
-   }
+    if (h4content.indexOf(inputValue) !== -1) {
+      course.style.display = "block";
+    } else {
+      course.style.display = "none";
+    }
   });
-
 };
 
-closeSearchModal.onclick = e => {
+closeSearchModal.onclick = (e) => {
   searchModal.style.display = "none";
 };
 
-
-
-
 // logic Register book/buy
-var btnConfirm = document.querySelector('.modal-register-box-confirm');
-var confirmName = document.getElementById('input-name');
-var confirmAge  = document.getElementById('input-age');
-var confirmTel = document.getElementById('input-tel');
-var confirmMail = document.getElementById('input-email');
+var btnConfirm = document.querySelector(".modal-register-box-confirm");
+var confirmName = document.getElementById("input-name");
+var confirmAge = document.getElementById("input-age");
+var confirmTel = document.getElementById("input-tel");
+var confirmMail = document.getElementById("input-email");
 
-var registerModal = btnConfirm.onclick = e => {
- if(registerCheck()) {
- alert('Chúng tôi sẽ liên hệ bạn sau ít phút nữa');
- const allInputItem = document.querySelectorAll('.modal-register__box-input-item-input');
- for(i in allInputItem) {
-  allInputItem[i].value = '';
- }
-}
- 
-}
+var registerModal = (btnConfirm.onclick = (e) => {
+  if (registerCheck()) {
+    alert("Chúng tôi sẽ liên hệ bạn sau ít phút nữa");
+    const allInputItem = document.querySelectorAll(
+      ".modal-register__box-input-item-input"
+    );
+    for (i in allInputItem) {
+      allInputItem[i].value = "";
+    }
+  }
+});
 
-function registerCheck()  {
- // Name
-if(confirmName.value.length < 8) {
-  confirmName.style.borderBottomColor = 'red'
-  return false
-}
-else {
- confirmName.style.borderBottomColor = 'var(--text-green-color)'
-}
+function registerCheck() {
+  // Name
+  if (confirmName.value.length < 8) {
+    confirmName.style.borderBottomColor = "red";
+    return false;
+  } else {
+    confirmName.style.borderBottomColor = "var(--text-green-color)";
+  }
 
+  //  Age
+  if (confirmAge.value < 13) {
+    confirmAge.style.borderBottomColor = "red";
+    return false;
+  } else {
+    confirmAge.style.borderBottomColor = "var(--text-green-color)";
+  }
 
-//  Age
-if(confirmAge.value < 13) {
-  confirmAge.style.borderBottomColor = 'red'
-  return false;
-}
-else {
- confirmAge.style.borderBottomColor = 'var(--text-green-color)'
-}
+  //  Telephone
+  if (isNaN(confirmTel.value) || confirmTel.value.length !== 10) {
+    confirmTel.style.borderBottomColor = "red";
+    return false;
+  } else {
+    confirmTel.style.borderBottomColor = "var(--text-green-color)";
+  }
 
-
-//  Telephone
-if(isNaN(confirmTel.value) || confirmTel.value.length !== 10) {
-  confirmTel.style.borderBottomColor = 'red'
-  return false
-} 
-else {
-confirmTel.style.borderBottomColor = 'var(--text-green-color)'
-
-}
-
-
-// Email
-if(confirmMail.value.indexOf('@gmail.com') !== -1 && confirmMail.value.length > 10) {
-confirmMail.style.borderBottomColor = 'var(--text-green-color)'
-return true;
-
-} else {
-confirmMail.style.borderBottomColor = 'red'
-return false;
-}
+  // Email
+  if (
+    confirmMail.value.indexOf("@gmail.com") !== -1 &&
+    confirmMail.value.length > 10
+  ) {
+    confirmMail.style.borderBottomColor = "var(--text-green-color)";
+    return true;
+  } else {
+    confirmMail.style.borderBottomColor = "red";
+    return false;
+  }
 }
 
 //close register
-var registerClose = document.querySelector('.modal-register-box-close');
-var modalRegister = document.querySelector('.modal-register')
+var registerClose = document.querySelector(".modal-register-box-close");
+var modalRegister = document.querySelector(".modal-register");
 
-registerClose.onclick = e => {
+registerClose.onclick = (e) => {
+  modalRegister.style.display = "none";
+};
 
-modalRegister.style.display = 'none';
+var bookBtn = document.querySelectorAll(
+  ".content__place-info-wrap-item-content-btn"
+);
+
+for (var i of bookBtn) {
+  console.log(i);
+  i.onclick = (e) => {
+    e.preventDefault();
+    modalRegister.style.display = "block";
+  };
 }
-
-var bookBtn = document.querySelectorAll('.content__place-info-wrap-item-content-btn');
-
-for(var i of bookBtn) {
- console.log(i);
- i.onclick = e => {
-  e.preventDefault();
- modalRegister.style.display = 'block';
- }
-}
-

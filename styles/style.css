@@ -4,6 +4,7 @@
 
 .black-mode {
      background-color: #18191a;
+     z-index: -1;
 }
 
 ::selection {
@@ -480,7 +481,7 @@ align-items: center;
 .content__place-info-item-text-p{
  font-size: 1.8rem;
  font-weight: 300;
- color: #9f9f9f;
+ color: #9a9a9a;
  margin-bottom: 12px;
 }
 
@@ -575,7 +576,7 @@ object-fit: cover;
 
 }
 .content__place-info-wrap-item-title-h5{
- color: #9a9a9a;
+ color: #8d8c8c;
  font-size: 1.7rem;
  letter-spacing: 2px;
 }
@@ -649,7 +650,7 @@ display: none;
 }
 
 .content__place-info-wrap-item-content-text-p{
- color: #9a9a9a;
+ color: #8d8c8c;
  font-size: 1.6rem;
  letter-spacing: 1px;
 }

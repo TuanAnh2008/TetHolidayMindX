@@ -208,7 +208,7 @@
 
 
    .content {
-    margin-top: var(--header-height-wrap);
+    /* margin-top: var(--header-height-wrap); */
     padding: 24px;
 }
 
@@ -327,8 +327,5 @@ border-radius: 10px;
     font-size: 2rem;
     text-align: justify;
     letter-spacing: 1px;
-}
-
-.content__main-detials-text-p:first-of-type {
- color: rgb(0, 0, 0);
+    color: #000;
 }
